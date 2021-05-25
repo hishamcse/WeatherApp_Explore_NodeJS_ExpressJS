@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather App</title>
+
+    <link rel="stylesheet" href="css/style.css">            <!-- auto works. no need to specify full correct path -->
+
+    <script defer src="js/script.js"></script>
+</head>
+<body>
+
+<div class="main-content">
+     {{>header}}
+
+    <p>Use this page to get weather data</p>
+
+    <form>
+        <input type="search" placeholder="Enter location">
+        <button type="submit">search!</button>
+    </form>
+
+    <p class="msg-1"></p>
+    <p class="msg-2"></p>
+</div>
+
+     {{>footer}}
+</body>
+</html>
