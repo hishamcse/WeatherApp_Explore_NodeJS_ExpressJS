@@ -10,7 +10,7 @@ const clearField = () => {
 };
 
 const fetchData = (location) => {
-    fetch(`http://localhost:3000/weather?address=${location}`).then((response) => {
+    fetch(`/weather?address=${location}`).then((response) => {
         if (!response.ok) {
             clearField();
             message2.textContent = response.error().statusText;
