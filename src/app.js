@@ -55,7 +55,7 @@ app.get('/weather', (req, res) => {
             return res.send({error});
         }
 
-        forecast(latitude, longitude, (error, {weather_descriptions: weatherState, temperature, precip} = {}) => {
+        forecast(latitude, longitude, (error, {weather_descriptions: weatherState, temperature, precip,weather_icons} = {}) => {
             if (error) {
                 return res.send({error});
             }
@@ -63,7 +63,8 @@ app.get('/weather', (req, res) => {
             res.send({
                 address: req.query.address,
                 location,
-                forecast: `${weatherState}. Today temperature is: ${temperature}℃. There is ${precip}% chance of rain`
+                forecast: `${weatherState}. Today temperature is: ${temperature}℃. There is ${precip}% chance of rain`,
+                weather_icons
             });
         });
     });

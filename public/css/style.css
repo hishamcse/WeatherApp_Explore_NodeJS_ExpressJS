@@ -47,6 +47,11 @@ button {
     padding: 8px;
 }
 
+.weather-img{
+    margin-top: 50px;
+    width: 100px;
+}
+
 footer {
     color: #888888;
     border-top: 1px solid #eeeeee;

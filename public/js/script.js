@@ -2,6 +2,7 @@ const form = document.querySelector('form');
 const input = document.querySelector('input');
 const message1 = document.querySelector('.msg-1');
 const message2 = document.querySelector('.msg-2');
+const image = document.querySelector('img');
 
 const clearField = () => {
     message2.style.color = 'black';
@@ -26,6 +27,7 @@ const fetchData = (location) => {
             return;
         }
 
+        image.src = data.weather_icons;
         message1.textContent = `Location: ${data.location}`;
         message2.textContent = `Forecast: ${data.forecast}`;
     });
