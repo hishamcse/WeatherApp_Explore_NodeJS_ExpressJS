@@ -55,7 +55,12 @@ app.get('/weather', (req, res) => {
             return res.send({error});
         }
 
-        forecast(latitude, longitude, (error, {weather_descriptions: weatherState, temperature, precip,weather_icons} = {}) => {
+        forecast(latitude, longitude, (error, {
+            weather_descriptions: weatherState,
+            temperature,
+            precip,
+            weather_icons
+        } = {}) => {
             if (error) {
                 return res.send({error});
             }
